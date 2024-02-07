@@ -14,7 +14,14 @@ public:
             return {-1, -1};
         auto l = lower_bound(begin(nums), end(nums), target);
         auto r = upper_bound(begin(nums), end(nums), target);
-        return {distance(begin(nums), l), distance(begin(nums), r)-1};
+
+        int left_index = distance(begin(nums), l);
+        int right_index;
+        if (r == nums.end())
+            right_index = nums.size()-1;
+        else
+            right_index = distance(begin(nums), r) - 1; //-1 because upper bound points to next greater element
+        return {left_index, right_index};
     }
 };
 
