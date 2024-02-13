@@ -2,3 +2,5 @@
 temp.cpp
 .vscode/settings.json
 tempCodeRunnerFile.cpp
+.vscode/launch.json
+.vscode/tasks.json

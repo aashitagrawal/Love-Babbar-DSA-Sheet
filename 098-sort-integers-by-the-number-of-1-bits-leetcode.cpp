@@ -12,9 +12,9 @@ public:
         // return true when the first argument should come before the second argument in the sorted order, and false otherwises
         sort(begin(arr), end(arr), [&](int a, int b)
              {
-            if (__builtin_popcount(a) < __builtin_popcount(b))
+            if(__builtin_popcount(a)<__builtin_popcount(b))
                 return true;
-            else if (__builtin_popcount(a) == __builtin_popcount(b) && a < b)
+            else if(__builtin_popcount(a)==__builtin_popcount(b) && a<b)
                 return true;
             else
                 return false; });
